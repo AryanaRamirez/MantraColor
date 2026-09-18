@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <title>Galería</title>
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand head_a font_s fw_regular" href="../index.html"><i
+                        class="ph-fill ph-house i-menu"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-lg-0 mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="bienestar.html" class="head_a font_s fw_regular">Bienestar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dibujos-obras.html" class="head_a font_s fw_regular">Dibujos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="head_a page-selected font_s fw_bold">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" class="head_a font_s fw_regular">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="container-fluid p-0 m-0">
+        <section class="row mb-3">
+            <!-- Hero section -->
+            <div class="col gal-title">
+                <h2>Galería de arte</h2>
+            </div>
+        </section>
+
+        <!-- Carousel de Bootstrap -->
+        <div id="carouselExampleCaptions" class="carousel slide carr-position">
+            <!-- 
+                Comento el código de los indicadores porque no estoy segura si más adelante los voy a preferir en lugar de las flechitas de los costados.
+
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../imgs/colored.jpg" class="img-frame d-block w-100"
+                        alt="Descripción de la imagen coloreada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="img-caption"><span class="img-name">Nombre de la obra / dibujo</span>
+                            <span class="img-username">Nombre del coloreante</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../imgs/colored.jpg" class="img-frame d-block w-100"
+                        alt="Descripción de la imagen coloreada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="img-caption"><span class="img-name">Nombre de la obra / dibujo</span>
+                            <span class="img-username">Nombre del coloreante</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../imgs/colored.jpg" class="img-frame d-block w-100"
+                        alt="Descripción de la imagen coloreada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="img-caption"><span class="img-name">Nombre de la obra / dibujo</span>
+                            <span class="img-username">Nombre del coloreante</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <nav class="draw-menu">
+            <!-- Bank of images navigation -->
+            <!-- Nota: no voy a colocar links aún porque no estoy segura si quiero separarlos,
+                  tal vez piense en una mejor distribución más adelante con lo nuevo que vayamos viendo en las clases. -->
+            <a href="#"><button class="tab-default">Verticales</button></a>
+            <a href="#"><button class="tab-selected">Horizontales</button></a>
+        </nav>
+
+        <!-- Nota: las secciones Vertical y Horizontal se organizarán de izquierda a derecha, de arriba hacia abajo
+         dentro de un bloque contenedor que se aplicará para la próxima entrega cuando se apliquen los contenidos
+         dados en la misma. Se aplicará a futuro también un Carousel a las obras coloreadas por los usuarios. -->
+
+        <section class="rl-pad">
+            <div class="draw-org t-mrgn b-mrgn">
+                <figure><a href="#"><img class="horizontal" src="../imgs/skeleton-draw-h.jpg"
+                            alt="Nombre de la obra y autor"></a></figure>
+                <figure><a href="#"><img class="horizontal" src="../imgs/skeleton-draw-h.jpg"
+                            alt="Nombre de la obra y autor"></a></figure>
+                <figure><a href="#"><img class="horizontal" src="../imgs/skeleton-draw-h.jpg"
+                            alt="Nombre de la obra y autor"></a></figure>
+                <figure><a href="#"><img class="horizontal" src="../imgs/skeleton-draw-h.jpg"
+                            alt="Nombre de la obra y autor"></a></figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-12 footer_gap">
+            <h4>Mapa del sitio</h4>
+            <nav>
+                <a href="../index.html" class="footer_a font_xs fw_regular">Inicio</a>
+                <a href="bienestar.html" class="footer_a font_xs fw_regular">Bienestar</a>
+                <a href="dibujos-obras.html" class="footer_a font_xs fw_regular">Dibujos</a>
+                <a href="#" class="footer_a font_xs fw_bold">Galería</a>
+                <a href="contacto.html" class="footer_a font_xs fw_regular">Contacto</a>
+            </nav>
+        </div>
+        <div class="footer_copy">
+            <p class="small">© 2026 Mantra Color. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Funcionalidades de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

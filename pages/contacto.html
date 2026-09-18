@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand head_a font_s fw_regular" href="../index.html"><i class="ph-fill ph-house i-menu"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-lg-0 mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="bienestar.html" class="head_a font_s fw_regular">Bienestar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dibujos-obras.html" class="head_a font_s fw_regular">Dibujos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="galeria.html" class="head_a font_s fw_regular">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="head_a page-selected font_s fw_bold">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="hero-contacto">
+            <!-- Hero section -->
+            <div class="content-hero-contacto">
+                <div class="content">
+                    <h1>Quedemos en contacto</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="sect-bckgrnd">
+            <article>
+                <p class="bajada b-mrgn">Queremos crecer y que formes parte de nuestra comunidad, es por esto que te invitamos a que
+                    nos compartas tus sugerencias e ideas de dibujos</p>
+                <form action="" class="form-pad">
+                    <div class="frm-lab">
+                        <label for="form-name">Nombre</label>
+                        <input type="text" id="form-name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="frm-lab">
+                        <label for="type-select">Sugerencia o idea</label>
+                        <div class="form-select-option">
+                            <select name="opciones" id="type-select" required>
+                                <option value="" disabled selected>Seleccioná una opción</option>
+                                <option value="idea">Idea</option>
+                                <option value="sugerencia">Sugerencia</option>
+                            </select>
+                            <i class="ph ph-caret-down i-color"></i>
+                        </div>
+                    </div>
+                    <div class="frm-lab">
+                        <label for="comment">Comentario</label>
+                        <textarea name="comentario" id="comment" class="form-textarea" placeholder="Hola, me gustaría compartirles una idea..."></textarea>
+                    </div>        
+                    <div class="btn-width">
+                        <button type="submit" class="cta-contacto">Enviar </button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="t-mrgn">
+        <div class="footer_gap">
+            <h4>Mapa del sitio</h4>
+            <nav>
+                <a href="../index.html" class="footer_a font_xs fw_regular">Inicio</a>
+                <a href="bienestar.html" class="footer_a font_xs fw_regular">Bienestar</a>
+                <a href="dibujos-obras.html" class="footer_a font_xs fw_regular">Dibujos</a>
+                <a href="galeria.html" class="footer_a font_xs fw_regular">Galería</a>
+                <a href="#" class="footer_a font_xs fw_bold">Contacto</a>
+            </nav>
+        </div>
+        <div class="footer_copy">
+            <p class="small">© 2026 Mantra Color. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Funcionalidades de Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,2295 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap');
+
+* {
+    /* clean base styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* ** *** FONT SETTINGS *** ** */
+/* Font sizes */
+.font_xs {
+    font-size: 0.75rem;
+}
+
+.font_s {
+    font-size: 0.875rem;
+}
+
+.font_r {
+    font-size: 1rem;
+}
+
+.font_m {
+    font-size: 1.5rem;
+}
+
+.font_l {
+    font-size: 2rem;
+}
+
+.font_xl {
+    font-size: 4rem;
+}
+
+.font_xxl {
+    font-size: 8rem;
+}
+
+/* Font weights */
+.fw_light {
+    font-weight: 300;
+}
+
+.fw_regular {
+    font-weight: 400;
+}
+
+.fw_bold {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+    /* H1 H2 H3 H4 default settings */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2.6rem;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+p {
+    /* body text */
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.p-subtitle {
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    letter-spacing: 7%;
+    font-weight: 100;
+}
+
+.subt-height {
+    line-height: 2.4;
+}
+
+.h3-color {
+    color: rgb(62, 112, 167);
+    font-weight: 600;
+}
+
+.bread-style {
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(21, 37, 56);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.alt-txt {
+    font-family: "Syncopate", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3%;
+}
+
+.bajada {
+    /* hero text */
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+/* ** *** end of font settings *** ** */
+
+
+
+/* ** *** BODY AND HEADER SETTINGS *** ** */
+body {
+    /* body default settings */
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    background-color: rgb(250, 248, 245);
+    color: rgb(21, 37, 56);
+}
+
+header {
+    background-color: rgb(250, 248, 245);
+}
+
+.head_a {
+    /* Header links style configuration */
+    font-family: "Syncopate", sans-serif;
+    color: rgb(165, 71, 24);
+    letter-spacing: 3%;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.head_a i {
+    color: rgb(165, 71, 24);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-selected {
+    background-color: rgb(116, 116, 73);
+    color: rgb(250, 248, 245);
+}
+
+.page-selected i {
+    color: rgb(250, 248, 245);
+}
+
+.i-color {
+    color: rgb(165, 71, 24);
+}
+
+/* end of body and header settings */
+
+
+
+/* ** *** BUTTON SETTINGS *** ** */
+a {
+    /* general links */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3%;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: rgb(250, 248, 245);
+}
+
+i {
+    /* icon color */
+    color: rgb(250, 248, 245);
+    font-size: 1rem;
+}
+
+.i-menu {
+    font-size: 1rem;
+}
+
+.btn {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 1rem 1rem 1rem 1.6rem;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* filled CTA-DIBUJOS button */
+    .cta-dibujo-filled {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(250, 248, 245);
+        background-color: rgb(165, 71, 24);
+        border: none;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-dibujo-filled::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e6f0";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-dibujo-filled:hover {
+        /* CTA hover */
+        background-color: rgb(165, 71, 24, 0.7);
+        border-radius: 17px;
+    }
+
+    .cta-dibujo-filled:active {
+        /* CTA active */
+        background-color: rgb(165, 71, 24, 0.7);
+        border-radius: 17px;
+    }
+    /* end of filled CTA-DIBUJOS button */
+
+/* outline CTA-BIENESTAR button */
+    .cta-bienestar-m {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-bienestar-m::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\ed5c";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-bienestar-m:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-bienestar-m:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-bienestar-w {
+        display: none;
+    }
+    /* end of outline CTA-BIENESTAR button */
+
+    /* outline CTA-DIBUJOS button */
+    .cta-dibujos {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-dibujos::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e6f0";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-dibujos:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-dibujos:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+    /* end of outline CTA-DIBUJOS  button */
+
+    /* outline CTA-ARTE button */
+    .cta-arte-m {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-arte-m::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e590";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-arte-m:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-arte-m:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-arte-w {
+        display: none;
+    }
+    /* end of outline CTA-ARTE button */
+
+    /* outline PRINT ICON-ONLY button */
+    .cta-print {
+        /* CTA default */
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        height:fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-print::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e3dc";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-print:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-print:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+    /* end of outline PRINT ICON-ONLY button */
+
+    /* outline CONTACTO button */
+    .cta-contacto {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 1rem;
+    }
+
+    .cta-contacto::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e398";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-contacto:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-contacto:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+    /* end of outline CONTACTO  button */
+
+/* end of button settings */
+
+
+.t-mrgn {
+    margin-top: 1rem;
+}
+
+.b-mrgn {
+    margin-bottom: 3rem;
+}
+
+
+/* ** *** SECTION SETTINGS *** ** */
+/* ** *** MAIN SECTION *** ** */
+.hero-main {
+    background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+}
+
+.content-hero-main {
+    height: 90vh;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+}
+
+.content {
+    text-align: center;
+    padding: 3rem 1rem 1rem 1rem;
+    color: rgb(238, 225, 210);
+    border-radius: 11px;
+    text-shadow: 0 0 22px rgb(21, 37, 56, 0.4);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-name {
+    color: rgb(165, 71, 24);
+    margin-bottom: 1rem;
+}
+
+.dib-sec-img {
+    background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/coloring-madala.jpg');
+    border-radius: 17px;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+/* .sect-cols {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+} */
+
+.sect-bckgrnd {
+    padding: 3rem 1rem;
+}
+
+.sect-bckgrnd-colored {
+    background-color: rgb(238, 225, 210);
+    padding: 3rem 1rem;
+}
+
+/* end of main section */
+
+
+/* BIENESTAR SECTION */
+.hero-bienestar {
+    background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/hero-bienestar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+}
+
+.content-hero-bienestar {
+    height: 90vh;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+.mindfulness::after {
+    display: flex;
+    border-bottom: rgb(165, 71, 24) 1px solid;
+    color: rgb(165, 71, 24);
+    display: flex;
+    font-size: 2rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: "Phosphor-Fill" !important;
+    content: "\ed5c";
+}
+
+.cromaterapia-m::after {
+    display: flex;
+    border-bottom: rgb(165, 71, 24) 1px solid;
+    color: rgb(165, 71, 24);
+    display: flex;
+    font-size: 2rem;
+    align-items: flex-end;
+    font-family: "Phosphor-Fill" !important;
+    content: "\e6f0";
+}
+
+.cromaterapia-w::after {
+    display: none;
+}
+
+/* end of bienestar's section */
+
+
+/* ** *** DRAWINGS' SECTION *** ** */
+.dib-sect-bckgrnd {
+    padding: 3rem 1rem 2rem 1rem;
+}
+
+.drawing-content {
+    text-align: center;
+    padding: 0;
+    color: rgb(21, 37, 56);
+}
+
+.draw-menu {
+    display: flex;
+    justify-content: safe center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.draw-menu-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.draw-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-h-m {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.sect-dibujos {
+    display: grid;
+    grid-template-rows: 1fr 1px 1fr;
+    padding: 0 1rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.dib-title {
+    display: flex;
+    justify-content: center;
+}
+
+.art-dist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 24rem;
+    overflow-y: auto;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.divisor {
+    border-bottom: rgb(116, 116, 73) 1px dashed;
+    width: auto;
+}
+
+.vertical {
+    /* Vertical image size */
+    width: 122px;
+    height: auto;
+    border: rgb(165, 71, 24) 1px solid;
+    border-radius: 4px;
+}
+
+.horizontal {
+    /* Horizontal image size */
+    width: 157px;
+    height: auto;
+    border: rgb(165, 71, 24) 1px solid;
+    border-radius: 4px;
+}
+
+/* end of drawings' section */
+
+
+
+/* ** *** PRINT PAGE SECTION *** ** */
+.dib-to-print {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+
+.breadcrumb {
+    /* grid-area: bread; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dibujo-div {
+    /*  grid-area: img; */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-div {
+    /* grid-area: info; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* justify-content: space-between; */
+}
+
+.img-width {
+    width: 100%;
+}
+
+.print-bckgrnd {
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+.print-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.p-margin {
+    margin: 0;
+}
+
+/* end of print page section */
+
+
+
+/* ** *** GALLERY SETTINGS *** ** */
+.gal-title {
+    text-align: center;
+    color: rgb(21, 37, 56);
+    margin: 3rem 1rem 2rem 1rem;
+}
+
+.carr-position {
+    padding: 0 1rem 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.fig-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img-frame {
+    border: rgb(21, 37, 56) 2px solid;
+    border-radius: 17px;
+    width: 100%;
+}
+
+.i-gallery {
+    color: rgb(21, 37, 56);
+}
+
+.draw-org {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rl-pad {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* end of gallery settings */
+
+
+
+/* ** *** CONTACT SECTION *** ** */
+.hero-contacto {
+    background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/hero-contacto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+}
+
+.content-hero-contacto {
+    height: 90vh;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+.btn-width {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-btn-m {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 1rem 1rem 1rem 1.6rem;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.contact-btn-w {
+    display: none;
+}
+
+/* ** *** FORM SETTIINGS *** ** */
+.form-pad {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.frm-lab {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    /* Form label style settings */
+    font-family: "Space Grotesk", sans-serif;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+form input {
+    /* Form input style settings */
+    font-family: "Space Grotesk", sans-serif;
+    line-height: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: rgb(165, 71, 24) 1px solid;
+}
+
+form select {
+    /* Form select style settings */
+    font-family: "Space Grotesk", sans-serif;
+    line-height: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: rgb(165, 71, 24) 1px solid;
+    appearance: none;
+    width: 100%;
+}
+
+.form-select-option {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.form-textarea {
+    /* Form textarea style settings */
+    font-family: "Space Grotesk", sans-serif;
+    line-height: auto;
+    height: 10rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    resize: none;
+}
+
+input::placeholder {
+    color: rgb(62, 112, 167);
+}
+
+textarea::placeholder {
+    color: rgb(62, 112, 167);
+}
+
+.img_caption {
+    font-weight: 600;
+}
+
+/* end of form section */
+/* end of contact section */
+
+
+
+/* ** *** FOOTER SETTINGS *** ** */
+footer {
+    /* footer default settings */
+    background-color: rgb(116, 116, 73);
+    padding: 2rem 1rem 1rem 2.5rem;
+    color: rgb(250, 248, 245);
+}
+
+.footer_a {
+    /* Footer links style configuration */
+    font-family: "Syncopate", sans-serif;
+    color: rgb(250, 248, 245);
+    letter-spacing: 3%;
+    padding: 0.5rem 1rem;
+}
+
+.footer_gap {
+    /* footer space between elements */
+    margin-bottom: 5rem;
+}
+
+.footer_copy {
+    /* footer copyright text alingment */
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ** *** end of footer settings *** ** */
+
+
+
+.small {
+    /* minimun size text */
+    font-size: 0.75rem;
+}
+
+.red-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(211, 34, 37);
+  border-radius: 5px;
+}
+
+.blue-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(34, 118, 211);
+  border-radius: 5px;
+}
+
+.green-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(75, 211, 34);
+  border-radius: 5px;
+}
+
+.orange-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(211, 143, 34);
+  border-radius: 5px;
+}
+
+.yellow-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(211, 211, 34);
+  border-radius: 5px;
+}
+
+.white-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(250, 248, 245);
+  border-radius: 5px;
+  outline: rgb(210, 210, 210) 1px solid;
+  outline-offset: -1px;
+}
+
+.black-box::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+
+
+figure img {
+    display: block;
+}
+
+nav a button {
+    /* Future tab style configuration - default mode | Same a CTAs but without the icon */
+    font-family: "Syncopate", sans-serif;
+    font-size: 0.875rem;
+    color: rgb(165, 71, 24);
+    letter-spacing: 3%;
+    background-color: transparent;
+    padding: 1rem 0.75rem;
+    border: rgb(165, 71, 24) 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab-default {
+    /* Tab font's settings in default mode */
+    font-weight: 400;
+}
+
+.tab-selected {
+    /* Tab font's settings in selected mode */
+    font-weight: 600;
+    color: rgb(250, 248, 245);
+    background-color: rgb(165, 71, 24);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Invierte el color blanco por defecto a negro */
+}
+
+
+
+/* ** *** LIST SETTIINGS *** ** */
+ul {
+    list-style-position: inside;
+}
+
+
+
+/* ** *** BOOTSTRAP VALUES *** ** */
+.navbar-toggler {
+    font-size: 1rem;
+    border-color: transparent;
+    padding: 0 1rem;
+}
+
+/* end of bootstrap values */
+
+
+/* ** *** MEDIA QUEARY *** ** */
+/* * * * * * * * * * *   DESKTOP   * * * * * * * * * * */
+
+@media (min-width: 1024px) {
+
+    /* ** *** FONT SETTINGS *** ** */
+    /* Font sizes */
+    .font_xs {
+        font-size: 0.75rem;
+    }
+
+    .font_s {
+        font-size: 0.875rem;
+    }
+
+    .font_r {
+        font-size: 1rem;
+    }
+
+    .font_m {
+        font-size: 1.5rem;
+    }
+
+    .font_l {
+        font-size: 2rem;
+    }
+
+    .font_xl {
+        font-size: 4rem;
+    }
+
+    .font_xxl {
+        font-size: 8rem;
+    }
+
+    /* Font weights */
+    .fw_light {
+        font-weight: 300;
+    }
+
+    .fw_regular {
+        font-weight: 400;
+    }
+
+    .fw_bold {
+        font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3 {
+        /* H1 H2 H3 H4 default settings */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h1 {
+        font-size: 8rem;
+        line-height: 130%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    p {
+        /* body text */
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .p-subtitle {
+        font-variant: small-caps;
+        font-size: 1.5rem;
+        letter-spacing: 7%;
+        font-weight: 100;
+    }
+
+    .subt-height {
+        line-height: 2.4;
+    }
+
+    .h3-color {
+        color: rgb(62, 112, 167);
+        font-weight: 600;
+    }
+
+    .bread-style {
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 1.6;
+        letter-spacing: 1%;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgb(21, 37, 56);
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .alt-txt {
+        font-family: "Syncopate", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 3%;
+    }
+
+    .bajada {
+        /* hero text */
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    /* ** *** end of font settings *** ** */
+
+
+
+    /* ** *** NAV *** ** */
+    header {
+        background-color: rgb(116, 116, 73);
+    }
+
+    .head_a {
+        /* Header links style configuration */
+        font-family: "Syncopate", sans-serif;
+        color: rgb(251, 248, 244);
+        letter-spacing: 3%;
+        padding: 1rem 2rem;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head_a i {
+        color: rgb(251, 248, 244);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .page-selected {
+        background-color: rgb(250, 248, 245);
+        color: rgb(165, 71, 24);
+    }
+
+    .page-selected i {
+        color: rgb(165, 71, 24);
+    }
+
+    /* end of nav */
+
+
+    /* ** *** BUTTON SETTINGS *** ** */
+    a {
+        /* general links */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 3%;
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: rgb(250, 248, 245);
+    }
+
+    i {
+        /* icon color */
+        color: rgb(250, 248, 245);
+        font-size: 1.5rem;
+    }
+
+    .i-menu {
+        font-size: 1rem;
+    }
+
+    .btn {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        padding: 1rem 1rem 1rem 1.6rem;
+        border-radius: 17px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-filled {
+        background-color: rgb(165, 71, 24);
+        color: rgb(250, 248, 245);
+        border: none;
+    }
+
+    .btn-filled:hover {
+        /* CTA filled hover */
+        background-color: rgb(238, 225, 210);
+        color: rgb(165, 71, 24);
+        border-color: rgb(165, 71, 24) 1px solid;
+    }
+
+    .btn-filled:hover i {
+        /* CTA filled icon hover */
+        color: rgb(165, 71, 24);
+    }
+
+    .btn-outlined {
+        /* outline CTA settings */
+        color: rgb(62, 112, 167);
+        letter-spacing: 3%;
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;
+    }
+
+    .btn-outlined {
+        /* outline CTA settings */
+        display: none;
+    }
+
+    .btn-outlined:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .btn-outlined-w i {
+        /* CTA icon */
+        color: rgb(62, 112, 167);
+    }
+
+    /* outline CTA-BIENESTAR button */
+    .cta-bienestar-w {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-bienestar-w::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\ed5c";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-bienestar-w:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-bienestar-w:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-bienestar-m {
+        display: none;
+    }
+    /* end of outline CTA-BIENESTAR button */
+    
+    /* outline CTA-ARTE button */
+    .cta-arte-w {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 3%;
+        color: rgb(62, 112, 167);
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;   
+        border-radius: 17px;
+        padding: 1rem 1rem 1rem 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-arte-w::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e590";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .cta-arte-w:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-arte-w:active {
+        /* CTA active */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .cta-arte-m {
+        display: none;
+    }
+    /* end of outline CTA-ARTE button */
+
+    /* end of button settings */
+
+
+    /* ** *** SECTION SETTINGS *** ** */
+    /* ** *** MAIN SECTION *** ** */
+    .hero-main {
+        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* width: 100vw; */
+        height: 127vh;
+        display: block;
+    }
+
+    .content-hero-main {
+        height: 127vh;
+        /* gap: 1rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        /* padding-bottom: 5rem; */
+    }
+
+    .content {
+        text-align: center;
+        /* padding: 3rem 4rem; */
+        color: rgb(238, 225, 210);
+        border-radius: 11px;
+        text-shadow: 0 0 22px rgb(21, 37, 56, 0.4);
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .dib-sec-img {
+        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/coloring-madala.jpg');
+        border-radius: 17px;
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    }
+
+    .sect-cols {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .sect-bckgrnd {
+        padding: 7rem 12rem;
+    }
+
+    .sect-bckgrnd-colored {
+        background-color: rgb(238, 225, 210);
+        padding: 7rem 12rem;
+    }
+
+    /* end of main section */
+
+
+    /* BIENESTAR SECTION */
+    .line {
+        display: flex;
+        border-bottom: rgb(165, 71, 24) 1px solid;
+    }
+
+    .cromaterapia-w::after {
+        display: flex;
+        border-bottom: rgb(165, 71, 24) 1px solid;
+        color: rgb(165, 71, 24);
+        display: flex;
+        font-size: 2rem;
+        height: 7.7rem;
+        align-items: flex-end;
+        font-family: "Phosphor-Fill" !important;
+        content: "\e6f0";
+    }
+
+    .cromaterapia-m::after {
+        display: none;
+    }
+
+
+    /* end of bienestar section */
+
+
+    /* ** *** DRAWINGS' SECTION *** ** */
+    .dib-sect-bckgrnd {
+        padding: 5rem 12rem 3rem 12rem;
+    }
+
+    .drawing-content {
+        text-align: center;
+        padding: 3rem 4rem;
+        color: rgb(21, 37, 56);
+    }
+
+    .draw-menu {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .rl-pad {
+        padding: 0 12rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+  /*   .sect-dibujos {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        grid-template-rows: none;
+        padding: 0 4rem;
+        gap: 3rem;
+        margin-bottom: 7rem;
+    } */
+
+    .dib-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .art-dist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        height: 32rem;
+        overflow-y: auto;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .divisor {
+        border-left: rgb(116, 116, 73) 1px dashed;
+        height: auto;
+    }
+
+    .vertical {
+        /* Vertical image size */
+        width: 222px;
+        height: auto;
+        border: rgb(165, 71, 24) 1px solid;
+        border-radius: 4px;
+    }
+
+    .horizontal {
+        /* Horizontal image size */
+        width: 314px;
+        height: auto;
+        border: rgb(165, 71, 24) 1px solid;
+        border-radius: 4px;
+    }
+
+    /* end of drawings' section */
+
+
+    /* ** *** FOOTER SETTINGS *** ** */
+    footer {
+        /* footer default settings */
+        background-color: rgb(116, 116, 73);
+        padding: 2rem 2rem 1rem 2.5rem;
+        color: rgb(250, 248, 245);
+    }
+
+    .footer_a {
+        /* Footer links style configuration */
+        font-family: "Syncopate", sans-serif;
+        color: rgb(250, 248, 245);
+        letter-spacing: 3%;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .footer_gap {
+        /* footer space between elements */
+        margin-bottom: 7rem;
+    }
+
+    .footer_copy {
+        /* footer copyright text alingment */
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* ** *** end of footer settings *** ** */
+
+
+
+    /* ** *** PRINT PAGE SECTION *** ** */
+    .dib-to-print {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 7rem 1fr;
+        grid-template-areas:
+            "bread bread"
+            "img info";
+    }
+
+    .breadcrumb {
+        grid-area: bread;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .dibujo-div {
+        grid-area: img;
+        display: flex;
+        justify-content: right;
+        padding-right: 1.5rem;
+    }
+
+    .info-div {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 1.5rem;
+    }
+
+    .print-bckgrnd {
+        margin: 0 8rem 8rem 8rem;
+    }
+
+    /* end of print page section */
+
+
+    /* ** *** GALLERY SETTINGS *** ** */
+    .gal-title {
+        text-align: center;
+        color: rgb(21, 37, 56);
+        margin: 8rem 0 4rem 0;
+    }
+
+    .carr-position {
+        padding: 0 12rem 4rem 12rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-caption {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .img-frame {
+        border: rgb(21, 37, 56) 2px solid;
+        border-radius: 17px;
+    }
+
+    .img-username {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(21, 37, 56);
+    }
+
+    .img-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(21, 37, 56);
+    }
+
+    .img-username::after {
+        /* CTA icon */
+        font-family: "Phosphor-Light" !important;
+        content: "\e590";
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .carousel-caption {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .i-gallery {
+        color: rgb(21, 37, 56);
+    }
+
+    .draw-org {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+    }
+
+    .rl-pad {
+        padding: 0 12rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* end of gallery settings */
+
+
+
+    /* ** *** CONTACT SECTION *** ** */
+    .contact-btn-w {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        padding: 1rem 1rem 1rem 1.6rem;
+        border-radius: 17px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-grow: 1;
+    }
+
+    .contact-btn-m {
+        display: none;
+    }
+
+
+    /* ** *** FORM SETTIINGS *** ** */
+    .form-pad {
+        padding: 0 12rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    form label {
+        /* Form label style settings */
+        font-family: "Space Grotesk", sans-serif;
+        line-height: auto;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    form input {
+        /* Form input style settings */
+        font-family: "Space Grotesk", sans-serif;
+        line-height: auto;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: rgb(165, 71, 24) 1px solid;
+    }
+
+    form select {
+        /* Form select style settings */
+        font-family: "Space Grotesk", sans-serif;
+        line-height: auto;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        background-color: transparent;
+        border: none;
+        border-bottom: rgb(165, 71, 24) 1px solid;
+        appearance: none;
+        width: 100%;
+    }
+
+    .form-select-option {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .form-textarea {
+        /* Form textarea style settings */
+        font-family: "Space Grotesk", sans-serif;
+        line-height: auto;
+        height: 12rem;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+        resize: none;
+    }
+
+    /* end of form section */
+    /* end of contact section */
+
+
+
+    .t-mrgn {
+        margin-top: 2rem;
+    }
+
+    .b-mrgn {
+        margin-bottom: 8rem;
+    }
+
+
+}
+
+
+
+/* * * * * * * * * * *   TABLET   * * * * * * * * * * */
+
+@media (min-width: 700px) and (max-width: 1024px) {
+
+/* ** *** FONT SETTINGS *** ** */
+    /* Font sizes */
+
+
+    h1 {
+        font-size: 5rem;
+        line-height: 130%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .h3-color {
+        color: rgb(62, 112, 167);
+        font-weight: 600;
+    }
+
+    .bread-style {
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 1.6;
+        letter-spacing: 1%;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgb(21, 37, 56);
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .alt-txt {
+        font-family: "Syncopate", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 3%;
+    }
+
+    .bajada {
+        /* hero text */
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    /* ** *** end of font settings *** ** */
+
+
+    /* ** *** NAV *** ** */
+    header {
+        background-color: rgb(116, 116, 73);
+    }
+
+    .head_a {
+        /* Header links style configuration */
+        font-family: "Syncopate", sans-serif;
+        color: rgb(251, 248, 244);
+        letter-spacing: 3%;
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .head_a i {
+        color: rgb(251, 248, 244);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .page-selected {
+        background-color: rgb(250, 248, 245);
+        color: rgb(165, 71, 24);
+    }
+
+    .page-selected i {
+        color: rgb(165, 71, 24);
+    }
+
+    /* end of nav */
+
+
+    /* ** *** BUTTON SETTINGS *** ** */
+    a {
+        /* general links */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 3%;
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: rgb(250, 248, 245);
+    }
+
+    i {
+        /* icon color */
+        color: rgb(250, 248, 245);
+        font-size: 1.5rem;
+    }
+
+    .i-menu {
+        font-size: 1rem;
+    }
+
+    .btn {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        padding: 1rem 1rem 1rem 1.6rem;
+        border-radius: 17px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-filled {
+        background-color: rgb(165, 71, 24);
+        color: rgb(250, 248, 245);
+        border: none;
+    }
+
+    .btn-filled:hover {
+        /* CTA filled hover */
+        background-color: rgb(238, 225, 210);
+        color: rgb(165, 71, 24);
+        border-color: rgb(165, 71, 24) 1px solid;
+    }
+
+    .btn-filled:hover i {
+        /* CTA filled icon hover */
+        color: rgb(165, 71, 24);
+    }
+
+    .btn-outlined-m {
+        /* outline CTA settings */
+        color: rgb(62, 112, 167);
+        letter-spacing: 3%;
+        background-color: transparent;
+        border: rgb(62, 112, 167) 1px solid;
+    }
+
+    .btn-outlined-w {
+        /* outline CTA settings */
+        display: none;
+    }
+
+    .btn-outlined-m:hover {
+        /* CTA hover */
+        background-color: rgb(62, 112, 167, 0.1);
+        border-radius: 17px;
+    }
+
+    .btn-outlined-m i {
+        /* CTA icon */
+        color: rgb(62, 112, 167);
+    }
+
+    /* end of button settings */
+
+
+    /* ** *** SECTION SETTINGS *** ** */
+    /* ** *** MAIN SECTION *** ** */
+    .hero-main {
+        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 127vh;
+        display: block;
+    }
+
+    .content-hero-main {
+        height: 127vh;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 5rem;
+    }
+
+    .content {
+        text-align: center;
+        padding: 3rem 4rem;
+        color: rgb(238, 225, 210);
+        text-shadow: 0 0 22px rgb(21, 37, 56, 0.4);
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .dib-sec-img {
+        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/coloring-madala.jpg');
+        border-radius: 17px;
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    }
+
+    .sect-bckgrnd {
+        padding: 5rem 7rem;
+    }
+
+    .sect-bckgrnd-colored {
+        background-color: rgb(238, 225, 210);
+        padding: 5rem 7rem;
+    }
+
+    /* end of main section */
+
+
+    /* BIENESTAR SECTION */
+    .cromaterapia-m::after {
+        display: flex;
+        border-bottom: rgb(165, 71, 24) 1px solid;
+        color: rgb(165, 71, 24);
+        display: flex;
+        font-size: 2rem;
+        height: 5rem;
+        align-items: flex-end;
+        font-family: "Phosphor-Fill" !important;
+        content: "\e6f0";
+    }
+
+    .cromaterapia-w::after {
+        display: none;
+    }
+
+    /* end of bienestar section */
+
+
+    /* ** *** DRAWINGS' SECTION *** ** */
+    .dib-sect-bckgrnd {
+        padding: 3rem 7rem;
+    }
+
+    .draw-menu {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .rl-pad {
+        padding: 0 12rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sect-dibujos {
+        display: grid;
+        grid-template-rows: 1fr 1px 1fr;
+        padding: 0 3rem;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .divisor {
+        border-left: rgb(116, 116, 73) 1px dashed;
+        height: auto;
+    }
+
+    .vertical {
+        /* Vertical image size */
+        width: 222px;
+        height: auto;
+        border: rgb(165, 71, 24) 1px solid;
+        border-radius: 4px;
+    }
+
+    .horizontal {
+        /* Horizontal image size */
+        width: 314px;
+        height: auto;
+        border: rgb(165, 71, 24) 1px solid;
+        border-radius: 4px;
+    }
+
+    /* end of drawings' section */
+
+
+    /* ** *** PRINT PAGE SECTION *** ** */
+    .print-bckgrnd {
+        margin: 1rem 7rem 4rem 7rem;
+    }
+
+    /* end of print page section */
+
+
+    /* ** *** GALLERY SETTINGS *** ** */
+    .gal-title {
+        text-align: center;
+        color: rgb(21, 37, 56);
+        margin: 3rem 7rem;
+    }
+
+    .carr-position {
+        padding: 0 7rem 3rem 7rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .draw-org {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+    }
+
+    .rl-pad {
+        padding: 0 3rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* end of gallery settings */
+
+
+
+    /* ** *** CONTACT SECTION *** ** */
+    .contact-btn-m {
+        /* CTA default */
+        font-family: "Syncopate", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        padding: 1rem 1rem 1rem 1.6rem;
+        border-radius: 17px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-grow: 1;
+    }
+
+    .contact-btn-w {
+        display: none;
+    }
+
+
+    /* ** *** FORM SETTIINGS *** ** */
+    .form-pad {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    form label {
+        /* Form label style settings */
+        font-family: "Space Grotesk", sans-serif;
+        line-height: auto;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* end of form section */
+    /* end of contact section */
+
+
+
+    /* ** *** FOOTER SETTINGS *** ** */
+    footer {
+        /* footer default settings */
+        background-color: rgb(116, 116, 73);
+        padding: 2rem 2rem 1rem 2.5rem;
+        color: rgb(250, 248, 245);
+    }
+
+    .footer_a {
+        /* Footer links style configuration */
+        font-family: "Syncopate", sans-serif;
+        color: rgb(250, 248, 245);
+        letter-spacing: 3%;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .footer_gap {
+        /* footer space between elements */
+        margin-bottom: 7rem;
+    }
+
+    .footer_copy {
+        /* footer copyright text alingment */
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* ** *** end of footer settings *** ** */
+
+
+
+    .t-mrgn {
+        margin-top: 2rem;
+    }
+
+    .b-mrgn {
+        margin-bottom: 4rem;
+    }
+
+
+}
+
+/* end of media quearies */
