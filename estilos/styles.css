@@ -497,7 +497,7 @@ i {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
+    /* width: 100vw; */
     height: 90vh;
     display: block;
 }
@@ -2038,7 +2038,7 @@ ul {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100vw;
+        /* width: 100vw; */
         height: 127vh;
         display: block;
     }
