@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+/* Color de resaltado de texto en la página */
+::selection {
+  background-color: #D2D2B7;
+  color: #757549;
+}
+
+::-webkit-selection {
+  background-color: #D2D2B7;
+  color: #757549;
+}
+
+
 html,
 body {
     overflow-x: hidden;
@@ -161,7 +173,7 @@ header {
     color: rgb(165, 71, 24);
     letter-spacing: 3%;
     padding: 0.5rem 1rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     margin-left: 1rem;
 }
 
@@ -249,6 +261,7 @@ i {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transition: transform 0.3s ease-in-out;
     /* Animation */
     background: linear-gradient(270deg, #A64818, #B99D7C, #757549, #A64818);
     background-size: 600% 600%;
@@ -275,9 +288,11 @@ i {
     content: "\e6f0";
     font-size: 1.5rem;
     line-height: 1;
+}
 
-
-
+.cta-dibujo-filled:hover {
+    box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+    transform: translateY(-3px);
 }
 
 /* end of filled CTA-DIBUJOS button */
@@ -344,7 +359,7 @@ i {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cta-dibujos::after {
@@ -359,7 +374,8 @@ i {
     /* CTA hover */
     background-color: rgb(62, 112, 167, 0.1);
     border-radius: 17px;
-    transform: rotate(4deg);
+    box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+    transform: rotate(1deg);
 }
 
 .cta-dibujos:active {
@@ -429,6 +445,7 @@ i {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cta-print::after {
@@ -443,6 +460,7 @@ i {
     /* CTA hover */
     background-color: rgb(62, 112, 167, 0.1);
     border-radius: 17px;
+    transform: scale(1.2);
 }
 
 .cta-print:active {
@@ -510,23 +528,44 @@ i {
 /* ** *** SECTION SETTINGS *** ** */
 /* ** *** MAIN SECTION *** ** */
 .hero-main {
-    background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
+    /* Hero dividido: imagen a la izquierda, textos a la derecha */
+    display: flex;
+    margin: 0;
+}
+
+.hero-main-img {
+    background-image: url('../imgs/handmade.webp');
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
-    /* width: 100vw; */
-    height: 90vh;
-    display: block;
+    min-height: 50vh;
+    padding: 0;
 }
 
 .content-hero-main {
-    height: 90vh;
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 2rem;
+    background-color: hsl(151, 31%, 87%);
+}
+
+.content.content-split {
+    /* sobrescribe .content para el hero dividido */
+    text-align: left;
+    padding: 0;
+    color: rgb(21, 37, 56);
+    text-shadow: none;
+}
+
+.content.content-split h1 {
+    /* escala para que entre en la mitad derecha */
+    font-size: clamp(2.6rem, 6vw, 6rem);
 }
 
 .content {
@@ -606,6 +645,11 @@ i {
     justify-content: flex-end;
     font-family: "Phosphor-Fill" !important;
     content: "\ed5c";
+    transition: transform 0.3s ease-in-out;
+}
+
+.mindfulness:hover::after {
+    transform: skewX(11deg);
 }
 
 .cromaterapia-m::after {
@@ -617,10 +661,15 @@ i {
     align-items: flex-end;
     font-family: "Phosphor-Fill" !important;
     content: "\e6f0";
+    transition: transform 0.3s ease-in-out;
 }
 
 .cromaterapia-w::after {
     display: none;
+}
+
+.cromaterapia-w:hover::after {
+    transform: skewX(11deg);
 }
 
 /* end of bienestar's section */
@@ -1063,7 +1112,7 @@ nav a button {
     border: rgb(165, 71, 24) 1px solid;
     border-radius: 7px;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .tab-default {
@@ -1249,7 +1298,7 @@ ul {
         padding: 1rem 2rem;
         border-radius: 7px;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1308,7 +1357,7 @@ ul {
         padding: 1rem 1rem 1rem 1.6rem;
         border-radius: 17px;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1374,7 +1423,7 @@ ul {
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
     }
 
     .cta-bienestar-w::after {
@@ -1389,7 +1438,8 @@ ul {
         /* CTA hover */
         background-color: rgb(62, 112, 167, 0.1);
         border-radius: 17px;
-        transform: rotate(-4deg);
+        box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+        transform: rotate(-1deg);
     }
 
     .cta-bienestar-w:active {
@@ -1421,7 +1471,7 @@ ul {
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
     }
 
     .cta-arte-w::after {
@@ -1436,7 +1486,8 @@ ul {
         /* CTA hover */
         background-color: rgb(62, 112, 167, 0.1);
         border-radius: 17px;
-        transform: rotate(-4deg);
+        box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+        transform: rotate(-1deg);
     }
 
     .cta-arte-w:active {
@@ -1457,23 +1508,15 @@ ul {
     /* ** *** SECTION SETTINGS *** ** */
     /* ** *** MAIN SECTION *** ** */
     .hero-main {
-        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        /* width: 100vw; */
-        height: 127vh;
-        display: block;
+        min-height: 90vh;
+    }
+
+    .hero-main-img {
+        min-height: 90vh;
     }
 
     .content-hero-main {
-        height: 127vh;
-        /* gap: 1rem; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        /* padding-bottom: 5rem; */
+        padding: 4rem 6rem;
     }
 
     .content {
@@ -1591,6 +1634,7 @@ ul {
         overflow-y: auto;
         margin-top: 1rem;
         justify-content: center;
+        padding: 1rem;
     }
 
     .divisor {
@@ -1604,6 +1648,12 @@ ul {
         height: auto;
         border: rgb(165, 71, 24) 1px solid;
         border-radius: 4px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .vertical:hover {
+        box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+        transform: translateY(-3px);
     }
 
     .horizontal {
@@ -1612,6 +1662,12 @@ ul {
         height: auto;
         border: rgb(165, 71, 24) 1px solid;
         border-radius: 4px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .horizontal:hover {
+        box-shadow: 0 11px 22px rgba(20, 36, 54, 0.25);
+        transform: translateY(-3px);
     }
 
     /* end of drawings' section */
@@ -1632,7 +1688,7 @@ ul {
         letter-spacing: 3%;
         padding: 0.5rem 1rem;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
 
     .footer_gap {
@@ -1783,7 +1839,7 @@ ul {
         padding: 1rem 1rem 1rem 1.6rem;
         border-radius: 17px;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1945,7 +2001,7 @@ ul {
         letter-spacing: 3%;
         padding: 1.5rem 2rem;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
 
     .head_a i {
@@ -2001,7 +2057,7 @@ ul {
         padding: 1rem 1rem 1rem 1.6rem;
         border-radius: 17px;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2056,23 +2112,15 @@ ul {
     /* ** *** SECTION SETTINGS *** ** */
     /* ** *** MAIN SECTION *** ** */
     .hero-main {
-        background-image: linear-gradient(rgba(21, 37, 56, 0), rgba(21, 37, 56, 0.4)), url('../imgs/handmade.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        /* width: 100vw; */
-        height: 127vh;
-        display: block;
+        min-height: 70vh;
+    }
+
+    .hero-main-img {
+        min-height: 70vh;
     }
 
     .content-hero-main {
-        height: 127vh;
-        gap: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        padding-bottom: 5rem;
+        padding: 3rem;
     }
 
     .content {
@@ -2230,7 +2278,7 @@ ul {
         padding: 1rem 1rem 1rem 1.6rem;
         border-radius: 17px;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2279,7 +2327,7 @@ ul {
         letter-spacing: 3%;
         padding: 0.5rem 1rem;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
 
     .footer_gap {
