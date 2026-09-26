@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -161,10 +162,15 @@ header {
     letter-spacing: 3%;
     padding: 0.5rem 1rem;
     transition: background-color 0.2s ease, color 0.2s ease;
+    margin-left: 1rem;
 }
 
 .head_a i {
     color: rgb(165, 71, 24);
+}
+
+.head_a:hover {
+    background-color: hsl(60, 23%, 77%, 40%);
 }
 
 nav {
@@ -227,256 +233,267 @@ i {
 }
 
 /* filled CTA-DIBUJOS button */
-    .cta-dibujo-filled {
-        /* CTA default */
-        font-family: "Syncopate", sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 3%;
-        color: rgb(250, 248, 245);
-        background-color: rgb(165, 71, 24);
-        border: none;   
-        border-radius: 17px;
-        padding: 1rem 1rem 1rem 1.6rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+.cta-dibujo-filled {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    color: rgb(250, 248, 245);
+    /* background-color: rgb(165, 71, 24); */
+    border: none;
+    border-radius: 17px;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* Animation */
+    background: linear-gradient(270deg, #A64818, #B99D7C, #757549, #A64818);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
     }
 
-    .cta-dibujo-filled::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\e6f0";
-        font-size: 1.5rem;
-        line-height: 1;
+    50% {
+        background-position: 100% 50%;
     }
 
-    .cta-dibujo-filled:hover {
-        /* CTA hover */
-        background-color: rgb(165, 71, 24, 0.7);
-        border-radius: 17px;
+    100% {
+        background-position: 0% 50%;
     }
+}
 
-    .cta-dibujo-filled:active {
-        /* CTA active */
-        background-color: rgb(165, 71, 24, 0.7);
-        border-radius: 17px;
-    }
-    /* end of filled CTA-DIBUJOS button */
+.cta-dibujo-filled::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\e6f0";
+    font-size: 1.5rem;
+    line-height: 1;
+
+
+
+}
+
+/* end of filled CTA-DIBUJOS button */
 
 /* outline CTA-BIENESTAR button */
-    .cta-bienestar-m {
-        /* CTA default */
-        font-family: "Syncopate", sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 3%;
-        color: rgb(62, 112, 167);
-        background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
-        border-radius: 17px;
-        padding: 1rem 1rem 1rem 1.6rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+.cta-bienestar-m {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    color: rgb(62, 112, 167);
+    background-color: transparent;
+    border: rgb(62, 112, 167) 1px solid;
+    border-radius: 17px;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-    .cta-bienestar-m::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\ed5c";
-        font-size: 1.5rem;
-        line-height: 1;
-    }
+.cta-bienestar-m::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\ed5c";
+    font-size: 1.5rem;
+    line-height: 1;
+}
 
-    .cta-bienestar-m:hover {
-        /* CTA hover */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+.cta-bienestar-m:hover {
+    /* CTA hover */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-bienestar-m:active {
-        /* CTA active */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+.cta-bienestar-m:active {
+    /* CTA active */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-bienestar-w {
-        display: none;
-    }
-    /* end of outline CTA-BIENESTAR button */
+.cta-bienestar-w {
+    display: none;
+}
 
-    /* outline CTA-DIBUJOS button */
-    .cta-dibujos {
-        /* CTA default */
-        font-family: "Syncopate", sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 3%;
-        color: rgb(62, 112, 167);
-        background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
-        border-radius: 17px;
-        padding: 1rem 1rem 1rem 1.6rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+/* end of outline CTA-BIENESTAR button */
 
-    .cta-dibujos::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\e6f0";
-        font-size: 1.5rem;
-        line-height: 1;
-    }
+/* outline CTA-DIBUJOS button */
+.cta-dibujos {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    color: rgb(62, 112, 167);
+    background-color: transparent;
+    border: rgb(62, 112, 167) 1px solid;
+    border-radius: 17px;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
 
-    .cta-dibujos:hover {
-        /* CTA hover */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+.cta-dibujos::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\e6f0";
+    font-size: 1.5rem;
+    line-height: 1;
+}
 
-    .cta-dibujos:active {
-        /* CTA active */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
-    /* end of outline CTA-DIBUJOS  button */
+.cta-dibujos:hover {
+    /* CTA hover */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+    transform: rotate(4deg);
+}
 
-    /* outline CTA-ARTE button */
-    .cta-arte-m {
-        /* CTA default */
-        font-family: "Syncopate", sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 3%;
-        color: rgb(62, 112, 167);
-        background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
-        border-radius: 17px;
-        padding: 1rem 1rem 1rem 1.6rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+.cta-dibujos:active {
+    /* CTA active */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-arte-m::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\e590";
-        font-size: 1.5rem;
-        line-height: 1;
-    }
+/* end of outline CTA-DIBUJOS  button */
 
-    .cta-arte-m:hover {
-        /* CTA hover */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+/* outline CTA-ARTE button */
+.cta-arte-m {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    color: rgb(62, 112, 167);
+    background-color: transparent;
+    border: rgb(62, 112, 167) 1px solid;
+    border-radius: 17px;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-    .cta-arte-m:active {
-        /* CTA active */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+.cta-arte-m::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\e590";
+    font-size: 1.5rem;
+    line-height: 1;
+}
 
-    .cta-arte-w {
-        display: none;
-    }
-    /* end of outline CTA-ARTE button */
+.cta-arte-m:hover {
+    /* CTA hover */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    /* outline PRINT ICON-ONLY button */
-    .cta-print {
-        /* CTA default */
-        color: rgb(62, 112, 167);
-        background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
-        border-radius: 17px;
-        padding: 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        height:fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+.cta-arte-m:active {
+    /* CTA active */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-print::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\e3dc";
-        font-size: 1.5rem;
-        line-height: 1;
-    }
+.cta-arte-w {
+    display: none;
+}
 
-    .cta-print:hover {
-        /* CTA hover */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+/* end of outline CTA-ARTE button */
 
-    .cta-print:active {
-        /* CTA active */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
-    /* end of outline PRINT ICON-ONLY button */
+/* outline PRINT ICON-ONLY button */
+.cta-print {
+    /* CTA default */
+    color: rgb(62, 112, 167);
+    background-color: transparent;
+    border: rgb(62, 112, 167) 1px solid;
+    border-radius: 17px;
+    padding: 1rem;
+    cursor: pointer;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-    /* outline CONTACTO button */
-    .cta-contacto {
-        /* CTA default */
-        font-family: "Syncopate", sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 3%;
-        color: rgb(62, 112, 167);
-        background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
-        border-radius: 17px;
-        padding: 1rem 1rem 1rem 1.6rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        gap: 1rem;
-    }
+.cta-print::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\e3dc";
+    font-size: 1.5rem;
+    line-height: 1;
+}
 
-    .cta-contacto::after {
-        /* CTA icon */
-        font-family: "Phosphor-Light" !important;
-        content: "\e398";
-        font-size: 1.5rem;
-        line-height: 1;
-    }
+.cta-print:hover {
+    /* CTA hover */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-contacto:hover {
-        /* CTA hover */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
+.cta-print:active {
+    /* CTA active */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
 
-    .cta-contacto:active {
-        /* CTA active */
-        background-color: rgb(62, 112, 167, 0.1);
-        border-radius: 17px;
-    }
-    /* end of outline CONTACTO  button */
+/* end of outline PRINT ICON-ONLY button */
+
+/* outline CONTACTO button */
+.cta-contacto {
+    /* CTA default */
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    color: rgb(62, 112, 167);
+    background-color: transparent;
+    border: rgb(62, 112, 167) 1px solid;
+    border-radius: 17px;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.cta-contacto::after {
+    /* CTA icon */
+    font-family: "Phosphor-Light" !important;
+    content: "\e398";
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.cta-contacto:hover {
+    /* CTA hover */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
+
+.cta-contacto:active {
+    /* CTA active */
+    background-color: rgb(62, 112, 167, 0.1);
+    border-radius: 17px;
+}
+
+/* end of outline CONTACTO  button */
 
 /* end of button settings */
 
@@ -634,7 +651,7 @@ i {
 }
 
 .draw-menu::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .btn-h-m {
@@ -965,68 +982,68 @@ footer nav {
 }
 
 .red-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(211, 34, 37);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(211, 34, 37);
+    border-radius: 5px;
 }
 
 .blue-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(34, 118, 211);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(34, 118, 211);
+    border-radius: 5px;
 }
 
 .green-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(75, 211, 34);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(75, 211, 34);
+    border-radius: 5px;
 }
 
 .orange-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(211, 143, 34);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(211, 143, 34);
+    border-radius: 5px;
 }
 
 .yellow-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(211, 211, 34);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(211, 211, 34);
+    border-radius: 5px;
 }
 
 .white-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(250, 248, 245);
-  border-radius: 5px;
-  outline: rgb(210, 210, 210) 1px solid;
-  outline-offset: -1px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(250, 248, 245);
+    border-radius: 5px;
+    outline: rgb(210, 210, 210) 1px solid;
+    outline-offset: -1px;
 }
 
 .black-box::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: rgb(0, 0, 0);
-  border-radius: 5px;
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
 }
 
 
@@ -1063,7 +1080,8 @@ nav a button {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(1); /* Invierte el color blanco por defecto a negro */
+    filter: invert(1);
+    /* Invierte el color blanco por defecto a negro */
 }
 
 
@@ -1348,15 +1366,15 @@ ul {
         letter-spacing: 3%;
         color: rgb(62, 112, 167);
         background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
+        border: rgb(62, 112, 167) 1px solid;
         border-radius: 17px;
         padding: 1rem 1rem 1rem 1.6rem;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        transition: transform 0.3s ease;
     }
 
     .cta-bienestar-w::after {
@@ -1371,6 +1389,7 @@ ul {
         /* CTA hover */
         background-color: rgb(62, 112, 167, 0.1);
         border-radius: 17px;
+        transform: rotate(-4deg);
     }
 
     .cta-bienestar-w:active {
@@ -1382,8 +1401,9 @@ ul {
     .cta-bienestar-m {
         display: none;
     }
+
     /* end of outline CTA-BIENESTAR button */
-    
+
     /* outline CTA-ARTE button */
     .cta-arte-w {
         /* CTA default */
@@ -1393,15 +1413,15 @@ ul {
         letter-spacing: 3%;
         color: rgb(62, 112, 167);
         background-color: transparent;
-        border: rgb(62, 112, 167) 1px solid;   
+        border: rgb(62, 112, 167) 1px solid;
         border-radius: 17px;
         padding: 1rem 1rem 1rem 1.6rem;
         cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        transition: transform 0.3s ease;
     }
 
     .cta-arte-w::after {
@@ -1416,6 +1436,7 @@ ul {
         /* CTA hover */
         background-color: rgb(62, 112, 167, 0.1);
         border-radius: 17px;
+        transform: rotate(-4deg);
     }
 
     .cta-arte-w:active {
@@ -1427,6 +1448,7 @@ ul {
     .cta-arte-m {
         display: none;
     }
+
     /* end of outline CTA-ARTE button */
 
     /* end of button settings */
@@ -1547,7 +1569,7 @@ ul {
         gap: 1rem;
     }
 
-  /*   .sect-dibujos {
+    /*   .sect-dibujos {
         display: grid;
         grid-template-columns: 1fr 1px 1fr;
         grid-template-rows: none;
@@ -1860,7 +1882,7 @@ ul {
 
 @media (min-width: 700px) and (max-width: 1024px) {
 
-/* ** *** FONT SETTINGS *** ** */
+    /* ** *** FONT SETTINGS *** ** */
     /* Font sizes */
 
 
