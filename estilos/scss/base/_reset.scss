@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap');
+
+* {
+    /* clean base styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color de resaltado de texto en la página */
+::selection {
+    background-color: $selection-bg;
+    color: $selection-txt;
+}
+
+::-webkit-selection {
+    background-color: $selection-bg;
+    color: $selection-txt;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

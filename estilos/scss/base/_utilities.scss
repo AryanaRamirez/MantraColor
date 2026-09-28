@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** UTILIDADES *** ** */
+.t-mrgn {
+    margin-top: 1rem;
+
+    @include mq(tablet-up) {
+        margin-top: 2rem;
+    }
+}
+
+.b-mrgn {
+    margin-bottom: 3rem;
+
+    @include mq(desktop) {
+        margin-bottom: 8rem;
+    }
+
+    @include mq(tablet) {
+        margin-bottom: 4rem;
+    }
+}
+
+.small {
+    /* minimun size text */
+    font-size: 0.75rem;
+}
+
+/* Cuadrados de color de la leyenda */
+$color-boxes: (
+    "red": rgb(211, 34, 37),
+    "blue": rgb(34, 118, 211),
+    "green": rgb(75, 211, 34),
+    "orange": rgb(211, 143, 34),
+    "yellow": rgb(211, 211, 34),
+    "black": rgb(0, 0, 0),
+);
+
+@each $name, $color in $color-boxes {
+    .#{$name}-box {
+        @include color-box($color);
+    }
+}
+
+.white-box {
+    @include color-box($crema) {
+        outline: rgb(210, 210, 210) 1px solid;
+        outline-offset: -1px;
+    }
+}
+
+figure img {
+    display: block;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* ** *** BOOTSTRAP VALUES *** ** */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* Invierte el color blanco por defecto a negro */
+    filter: invert(1);
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+    border-color: transparent;
+    padding: 0 1rem;
+}

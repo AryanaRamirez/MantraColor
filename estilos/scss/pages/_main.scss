@@ -1,0 +1,128 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** MAIN SECTION (index) *** ** */
+.hero-main {
+    /* Hero dividido: imagen a la izquierda, textos a la derecha */
+    display: flex;
+    margin: 0;
+
+    @include mq(desktop) {
+        min-height: 90vh;
+    }
+
+    @include mq(tablet) {
+        min-height: 70vh;
+    }
+}
+
+.hero-main-img {
+    background-image: url('../imgs/handmade.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    padding: 0;
+
+    @include mq(desktop) {
+        min-height: 90vh;
+    }
+
+    @include mq(tablet) {
+        min-height: 70vh;
+    }
+}
+
+.content-hero-main {
+    @include flex-column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 3rem 1.5rem;
+    background-color: $menta;
+
+    @include mq(desktop) {
+        padding: 4rem 6rem;
+    }
+
+    @include mq(tablet) {
+        padding: 3rem;
+    }
+}
+
+.content {
+    text-align: center;
+    padding: 3rem 1rem 1rem 1rem;
+    color: $arena;
+    border-radius: 11px;
+    text-shadow: $sombra-texto;
+
+    @include mq(tablet) {
+        padding: 3rem 4rem;
+    }
+
+    /* sobrescribe .content para el hero dividido */
+    &.content-split {
+        text-align: left;
+        padding: 0;
+        color: $azul-noche;
+        text-shadow: none;
+
+        h1 {
+            /* escala para que entre en la mitad derecha */
+            font-size: clamp(2.6rem, 6vw, 6rem);
+        }
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(tablet-up) {
+        justify-content: flex-end;
+    }
+}
+
+.section-name {
+    color: $terracota;
+    margin-bottom: 1rem;
+}
+
+.dib-sec-img {
+    background-image: $overlay, url('../imgs/coloring-madala.jpg');
+    border-radius: $radio-cta;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+
+    @include mq(tablet-up) {
+        height: 400px;
+    }
+}
+
+.sect-cols {
+    @include mq(desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+.sect-bckgrnd,
+.sect-bckgrnd-colored {
+    padding: 3rem 1rem;
+
+    @include mq(desktop) {
+        padding: 7rem 12rem;
+    }
+
+    @include mq(tablet) {
+        padding: 5rem 7rem;
+    }
+}
+
+.sect-bckgrnd-colored {
+    background-color: $arena;
+}

@@ -1,0 +1,142 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** FONT SETTINGS *** ** */
+/* Font sizes */
+$font-sizes: (
+    xs: 0.75rem,
+    s: 0.875rem,
+    r: 1rem,
+    m: 1.5rem,
+    l: 2rem,
+    xl: 4rem,
+    xxl: 8rem,
+);
+
+@each $name, $size in $font-sizes {
+    .font_#{$name} {
+        font-size: $size;
+    }
+}
+
+/* Font weights */
+.fw_light {
+    font-weight: 300;
+}
+
+.fw_regular {
+    font-weight: 400;
+}
+
+.fw_bold {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+    /* H1 H2 H3 H4 default settings */
+    font-family: $font-titulos;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2.6rem;
+    line-height: 120%;
+
+    @include mq(desktop) {
+        font-size: 8rem;
+        line-height: 130%;
+    }
+
+    @include mq(tablet) {
+        font-size: 5rem;
+        line-height: 130%;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+
+    @include mq(tablet-up) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 1.4rem;
+
+    @include mq(desktop) {
+        font-size: 1.5rem;
+    }
+}
+
+h4 {
+    font-family: $font-texto;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+p {
+    /* body text */
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.p-subtitle {
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    letter-spacing: 7%;
+    font-weight: 100;
+}
+
+.subt-height {
+    line-height: 2.4;
+}
+
+.h3-color {
+    color: $azul;
+    font-weight: 600;
+}
+
+.bread-style {
+    font-family: $font-texto;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $azul-noche;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.alt-txt {
+    font-family: $font-titulos;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3%;
+}
+
+.bajada {
+    /* hero text */
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+
+    @include mq(desktop) {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    @include mq(tablet) {
+        font-size: 1.7rem;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+
+/* ** *** TABS (menú de dibujos) *** ** */
+nav a button {
+    /* Future tab style configuration - default mode | Same a CTAs but without the icon */
+    font-family: $font-titulos;
+    font-size: 0.875rem;
+    color: $terracota;
+    letter-spacing: 3%;
+    background-color: transparent;
+    padding: 1rem 0.75rem;
+    border: $terracota 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: $transition-colors;
+}
+
+.tab-default {
+    /* Tab font's settings in default mode */
+    font-weight: 400;
+}
+
+.tab-selected {
+    /* Tab font's settings in selected mode */
+    font-weight: 600;
+    color: $crema;
+    background-color: $terracota;
+}

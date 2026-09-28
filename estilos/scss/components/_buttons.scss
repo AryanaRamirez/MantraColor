@@ -1,0 +1,241 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** BUTTON SETTINGS *** ** */
+a {
+    /* general links */
+    font-family: $font-titulos;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3%;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: $crema;
+}
+
+i {
+    /* icon color */
+    color: $crema;
+    font-size: 1rem;
+
+    @include mq(tablet-up) {
+        font-size: 1.5rem;
+    }
+}
+
+.i-menu {
+    font-size: 1rem;
+}
+
+.btn {
+    /* CTA default */
+    font-family: $font-titulos;
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 1rem 1rem 1rem 1.6rem;
+    border-radius: 21px;
+    @include flex-center;
+    gap: 1rem;
+
+    @include mq(tablet-up) {
+        font-size: 0.875rem;
+        border-radius: $radio-cta;
+        cursor: pointer;
+        transition: $transition-colors;
+    }
+}
+
+.btn-filled {
+    @include mq(tablet-up) {
+        background-color: $terracota;
+        color: $crema;
+        border: none;
+
+        &:hover {
+            /* CTA filled hover */
+            background-color: $arena;
+            color: $terracota;
+
+            i {
+                color: $terracota;
+            }
+        }
+    }
+}
+
+.btn-outlined {
+    @include mq(desktop) {
+        /* outline CTA settings */
+        color: $azul;
+        letter-spacing: 3%;
+        background-color: transparent;
+        border: $azul 1px solid;
+        display: none;
+
+        &:hover {
+            background-color: $azul-hover;
+            border-radius: $radio-cta;
+        }
+    }
+}
+
+.btn-outlined-w {
+    @include mq(desktop) {
+        i {
+            color: $azul;
+        }
+    }
+
+    @include mq(tablet) {
+        display: none;
+    }
+}
+
+.btn-outlined-m {
+    @include mq(tablet) {
+        /* outline CTA settings */
+        color: $azul;
+        letter-spacing: 3%;
+        background-color: transparent;
+        border: $azul 1px solid;
+
+        &:hover {
+            background-color: $azul-hover;
+            border-radius: $radio-cta;
+        }
+
+        i {
+            color: $azul;
+        }
+    }
+}
+
+/* filled CTA-DIBUJOS button */
+.cta-dibujo-filled {
+    @include cta-base;
+    color: $crema;
+    border: none;
+    transition: $transition-transform;
+    /* Animation */
+    background: $gradiente-cta;
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+    @include cta-icon("\e6f0");
+
+    &:hover {
+        @include lift;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* outline CTA-BIENESTAR button */
+.cta-bienestar-m {
+    @include cta-base;
+    @include outline-azul;
+    @include cta-icon("\ed5c");
+    @include cta-states;
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+.cta-bienestar-w {
+    display: none;
+
+    @include mq(desktop) {
+        @include cta-base;
+        @include outline-azul;
+        transition: $transition-transform;
+        @include cta-icon("\ed5c");
+        @include cta-states;
+
+        &:hover {
+            box-shadow: $sombra-hover;
+            transform: rotate(-1deg);
+        }
+    }
+}
+
+/* outline CTA-DIBUJOS button */
+.cta-dibujos {
+    @include cta-base;
+    @include outline-azul;
+    transition: $transition-transform;
+    @include cta-icon("\e6f0");
+    @include cta-states;
+
+    &:hover {
+        box-shadow: $sombra-hover;
+        transform: rotate(1deg);
+    }
+}
+
+/* outline CTA-ARTE button */
+.cta-arte-m {
+    @include cta-base;
+    @include outline-azul;
+    @include cta-icon("\e590");
+    @include cta-states;
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+.cta-arte-w {
+    display: none;
+
+    @include mq(desktop) {
+        @include cta-base;
+        @include outline-azul;
+        transition: $transition-transform;
+        @include cta-icon("\e590");
+        @include cta-states;
+
+        &:hover {
+            box-shadow: $sombra-hover;
+            transform: rotate(-1deg);
+        }
+    }
+}
+
+/* outline PRINT ICON-ONLY button */
+.cta-print {
+    @include outline-azul;
+    border-radius: $radio-cta;
+    padding: 1rem;
+    cursor: pointer;
+    height: fit-content;
+    @include flex-center;
+    gap: 1rem;
+    transition: $transition-transform;
+    @include cta-icon("\e3dc");
+    @include cta-states;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+/* outline CONTACTO button */
+.cta-contacto {
+    @include cta-base;
+    @include outline-azul;
+    flex-grow: 1;
+    @include cta-icon("\e398");
+    @include cta-states;
+}

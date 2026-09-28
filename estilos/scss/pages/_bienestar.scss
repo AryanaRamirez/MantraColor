@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** BIENESTAR SECTION *** ** */
+.hero-bienestar {
+    @include hero-bg('../imgs/hero-bienestar.jpg');
+    width: 100vw;
+    height: 90vh;
+    display: block;
+}
+
+.content-hero-bienestar {
+    @include hero-content;
+}
+
+.line {
+    @include mq(desktop) {
+        display: flex;
+        border-bottom: $terracota 1px solid;
+    }
+}
+
+.mindfulness {
+    &::after {
+        @include section-icon("\ed5c");
+        justify-content: flex-end;
+        transition: $transition-transform;
+    }
+
+    &:hover::after {
+        transform: skewX(11deg);
+    }
+}
+
+/* Versión mobile/tablet del ícono de cromaterapia */
+.cromaterapia-m::after {
+    @include section-icon("\e6f0");
+    transition: $transition-transform;
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+    @include mq(tablet) {
+        display: flex;
+        height: 5rem;
+    }
+}
+
+/* Versión desktop del ícono de cromaterapia */
+.cromaterapia-w {
+    &::after {
+        display: none;
+
+        @include mq(desktop) {
+            @include section-icon("\e6f0");
+            height: 7.7rem;
+        }
+
+        @include mq(tablet) {
+            display: none;
+        }
+    }
+
+    &:hover::after {
+        transform: skewX(11deg);
+    }
+}

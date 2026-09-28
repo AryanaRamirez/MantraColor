@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** PRINT PAGE SECTION *** ** */
+.dib-to-print {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr;
+    margin: 0 1rem;
+    gap: 1rem;
+
+    @include mq(desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 7rem 1fr;
+        grid-template-areas:
+            "bread bread"
+            "img info";
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include mq(desktop) {
+        grid-area: bread;
+        margin-bottom: 2rem;
+    }
+}
+
+.dibujo-div {
+    display: flex;
+    justify-content: flex-start;
+
+    @include mq(desktop) {
+        grid-area: img;
+        justify-content: right;
+        padding-right: 1.5rem;
+    }
+}
+
+.info-div {
+    @include flex-column;
+
+    @include mq(desktop) {
+        grid-area: info;
+        justify-content: space-between;
+        padding-left: 1.5rem;
+    }
+}
+
+.img-width {
+    width: 100%;
+}
+
+.print-bckgrnd {
+    margin: 1rem 1rem 3rem 1rem;
+
+    @include mq(desktop) {
+        margin: 0 8rem 8rem 8rem;
+    }
+
+    @include mq(tablet) {
+        margin: 1rem 7rem 4rem 7rem;
+    }
+}
+
+.print-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.p-margin {
+    margin: 0;
+}

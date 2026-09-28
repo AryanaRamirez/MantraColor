@@ -1,0 +1,47 @@
+/* ** *** COLORES *** ** */
+$terracota: rgb(165, 71, 24);
+$azul: rgb(62, 112, 167);
+$azul-noche: rgb(21, 37, 56);
+$crema: rgb(250, 248, 245);
+$crema-claro: rgb(251, 248, 244);
+$arena: rgb(238, 225, 210);
+$oliva: rgb(116, 116, 73);
+$oliva-claro: rgb(210, 210, 183);
+$menta: hsl(151, 31%, 87%);
+
+/* Colores de resaltado de texto */
+$selection-bg: $oliva-claro;
+$selection-txt: $oliva;
+
+/* Hover de los links del header */
+$nav-hover: hsl(60, 23%, 77%, 40%);
+
+/* Hover y active de los CTA outline */
+$azul-hover: rgb(62, 112, 167, 0.1);
+
+/* Gradiente animado del CTA filled */
+$gradiente-cta: linear-gradient(270deg, #A64818, #B99D7C, #757549, #A64818);
+
+/* Oscurecido sobre las imágenes de fondo */
+$overlay: linear-gradient(rgba($azul-noche, 0), rgba($azul-noche, 0.4));
+
+$sombra-hover: 0 11px 22px rgba(20, 36, 54, 0.25);
+$sombra-texto: 0 0 22px rgb(21, 37, 56, 0.4);
+
+
+/* ** *** TIPOGRAFÍA *** ** */
+$font-titulos: "Syncopate", sans-serif;
+$font-texto: "Space Grotesk", sans-serif;
+$font-icon-light: "Phosphor-Light";
+$font-icon-fill: "Phosphor-Fill";
+
+
+/* ** *** BREAKPOINTS *** ** */
+$bp-tablet: 700px;
+$bp-desktop: 1024px;
+
+
+/* ** *** OTROS *** ** */
+$radio-cta: 17px;
+$transition-colors: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+$transition-transform: transform 0.3s ease-in-out;

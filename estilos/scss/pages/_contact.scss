@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** CONTACT SECTION *** ** */
+.hero-contacto {
+    @include hero-bg('../imgs/hero-contacto.jpg');
+    background-position: center;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+}
+
+.content-hero-contacto {
+    @include hero-content;
+}
+
+.btn-width {
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón de contacto: -m (mobile/tablet) y -w (desktop) */
+@mixin contact-btn($radius) {
+    font-family: $font-titulos;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 1rem 1rem 1rem 1.6rem;
+    border-radius: $radius;
+    @include flex-center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.contact-btn-m {
+    @include contact-btn(21px);
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+    @include mq(tablet) {
+        display: flex;
+        border-radius: $radio-cta;
+        cursor: pointer;
+        transition: $transition-colors;
+    }
+}
+
+.contact-btn-w {
+    display: none;
+
+    @include mq(desktop) {
+        @include contact-btn($radio-cta);
+        cursor: pointer;
+        transition: $transition-colors;
+    }
+
+    @include mq(tablet) {
+        display: none;
+    }
+}

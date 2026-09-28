@@ -1,0 +1,121 @@
+@use 'sass:list';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** DRAWINGS' SECTION *** ** */
+.dib-sect-bckgrnd {
+    padding: 3rem 1rem 2rem 1rem;
+
+    @include mq(desktop) {
+        padding: 5rem 12rem 3rem 12rem;
+    }
+
+    @include mq(tablet) {
+        padding: 3rem 7rem;
+    }
+}
+
+.drawing-content {
+    text-align: center;
+    padding: 0;
+    color: $azul-noche;
+
+    @include mq(desktop) {
+        padding: 3rem 4rem;
+    }
+}
+
+.draw-menu {
+    display: flex;
+    justify-content: safe center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include mq(tablet-up) {
+        justify-content: center;
+    }
+}
+
+.draw-menu-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.btn-h-m {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.sect-dibujos {
+    display: grid;
+    grid-template-rows: 1fr 1px 1fr;
+    padding: 0 1rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @include mq(tablet) {
+        padding: 0 3rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.dib-title {
+    display: flex;
+    justify-content: center;
+}
+
+.art-dist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 24rem;
+    overflow-y: auto;
+    margin-top: 1rem;
+    justify-content: center;
+
+    @include mq(desktop) {
+        gap: 1.4rem;
+        height: 32rem;
+        padding: 1rem;
+    }
+}
+
+.divisor {
+    border-bottom: $oliva 1px dashed;
+    width: auto;
+
+    @include mq(tablet-up) {
+        border-left: $oliva 1px dashed;
+        height: auto;
+    }
+}
+
+/* Miniaturas: vertical y horizontal */
+$thumbs: (
+    vertical: (122px, 222px),
+    horizontal: (157px, 314px),
+);
+
+@each $name, $widths in $thumbs {
+    .#{$name} {
+        @include thumb(list.nth($widths, 1));
+
+        @include mq(desktop) {
+            width: list.nth($widths, 2);
+            transition: $transition-transform;
+
+            &:hover {
+                @include lift;
+            }
+        }
+
+        @include mq(tablet) {
+            width: list.nth($widths, 2);
+        }
+    }
+}

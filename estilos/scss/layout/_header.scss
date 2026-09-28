@@ -1,0 +1,91 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** BODY AND HEADER SETTINGS *** ** */
+body {
+    /* body default settings */
+    font-family: $font-texto;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    background-color: $crema;
+    color: $azul-noche;
+}
+
+header {
+    background-color: $crema;
+
+    @include mq(tablet-up) {
+        background-color: $oliva;
+    }
+}
+
+.head_a {
+    /* Header links style configuration */
+    font-family: $font-titulos;
+    color: $terracota;
+    letter-spacing: 3%;
+    padding: 0.5rem 1rem;
+    transition: $transition-colors;
+    margin-left: 1rem;
+
+    i {
+        color: $terracota;
+    }
+
+    &:hover {
+        background-color: $nav-hover;
+    }
+
+    @include mq(tablet-up) {
+        color: $crema-claro;
+        cursor: pointer;
+
+        i {
+            color: $crema-claro;
+        }
+    }
+
+    @include mq(desktop) {
+        padding: 1rem 2rem;
+        border-radius: 7px;
+        @include flex-center;
+    }
+
+    @include mq(tablet) {
+        padding: 1.5rem 2rem;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq(tablet-up) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+.page-selected {
+    background-color: $oliva;
+    color: $crema;
+
+    i {
+        color: $crema;
+    }
+
+    @include mq(tablet-up) {
+        background-color: $crema;
+        color: $terracota;
+
+        i {
+            color: $terracota;
+        }
+    }
+}
+
+.i-color {
+    color: $terracota;
+}

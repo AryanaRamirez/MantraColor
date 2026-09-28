@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** FOOTER SETTINGS *** ** */
+footer {
+    /* footer default settings */
+    background-color: $oliva;
+    padding: 2rem 1rem 1rem 2.5rem;
+    color: $crema;
+
+    @include mq(tablet-up) {
+        padding: 2rem 2rem 1rem 2.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include mq(tablet-up) {
+            flex-direction: row;
+        }
+    }
+}
+
+.footer_a {
+    /* Footer links style configuration */
+    font-family: $font-titulos;
+    color: $crema;
+    letter-spacing: 3%;
+    padding: 0.5rem 1rem;
+
+    @include mq(tablet-up) {
+        cursor: pointer;
+        transition: $transition-colors;
+    }
+}
+
+.footer_gap {
+    /* footer space between elements */
+    margin-bottom: 5rem;
+
+    @include mq(tablet-up) {
+        margin-bottom: 7rem;
+    }
+}
+
+.footer_copy {
+    /* footer copyright text alignment */
+    display: flex;
+    justify-content: flex-start;
+
+    @include mq(tablet-up) {
+        justify-content: flex-end;
+    }
+}

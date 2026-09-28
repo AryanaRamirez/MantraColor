@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** GALLERY SETTINGS *** ** */
+.gal-title {
+    text-align: center;
+    color: $azul-noche;
+    margin: 3rem 1rem 2rem 1rem;
+
+    @include mq(desktop) {
+        margin: 8rem 0 4rem 0;
+    }
+
+    @include mq(tablet) {
+        margin: 3rem 7rem;
+    }
+}
+
+.carr-position {
+    padding: 0 1rem 2rem 1rem;
+    display: flex;
+    justify-content: center;
+
+    @include mq(desktop) {
+        padding: 0 12rem 4rem 12rem;
+    }
+
+    @include mq(tablet) {
+        padding: 0 7rem 3rem 7rem;
+    }
+}
+
+.fig-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img-caption {
+    @include mq(desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.img-frame {
+    border: $azul-noche 2px solid;
+    border-radius: $radio-cta;
+    width: 100%;
+}
+
+.img-username,
+.img-name {
+    @include mq(desktop) {
+        font-family: $font-texto;
+        font-size: 1rem;
+        color: $azul-noche;
+    }
+}
+
+.img-username {
+    @include mq(desktop) {
+        font-weight: 600;
+        @include cta-icon("\e590");
+    }
+}
+
+.img-name {
+    @include mq(desktop) {
+        font-weight: 400;
+    }
+}
+
+.carousel-caption {
+    @include mq(desktop) {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.i-gallery {
+    color: $azul-noche;
+}
+
+.draw-org {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include mq(tablet-up) {
+        gap: 1.4rem;
+    }
+
+    @include mq(desktop) {
+        justify-content: flex-start;
+    }
+
+    @include mq(tablet) {
+        justify-content: center;
+    }
+}
+
+.rl-pad {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    @include flex-column;
+
+    @include mq(tablet-up) {
+        margin-top: 0;
+    }
+
+    @include mq(desktop) {
+        padding: 0 12rem;
+    }
+
+    @include mq(tablet) {
+        padding: 0 3rem;
+    }
+}

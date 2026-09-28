@@ -1,0 +1,143 @@
+@use 'variables' as *;
+
+/* ** *** MEDIA QUERIES *** ** */
+/* desktop: >= 1024px | tablet: 700px - 1024px | tablet-up: >= 700px (tablet + desktop) */
+@mixin mq($bp) {
+    @if $bp == desktop {
+        @media (min-width: $bp-desktop) {
+            @content;
+        }
+    } @else if $bp == tablet {
+        @media (min-width: $bp-tablet) and (max-width: $bp-desktop) {
+            @content;
+        }
+    } @else if $bp == tablet-up {
+        @media (min-width: $bp-tablet) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint desconocido: #{$bp}";
+    }
+}
+
+
+/* ** *** LAYOUT *** ** */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column($gap: 1rem) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+
+/* ** *** BOTONES *** ** */
+/* Base compartida por los CTA con texto */
+@mixin cta-base {
+    font-family: $font-titulos;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 3%;
+    border-radius: $radio-cta;
+    padding: 1rem 1rem 1rem 1.6rem;
+    cursor: pointer;
+    @include flex-center;
+    gap: 1rem;
+}
+
+/* Estilo outline azul */
+@mixin outline-azul {
+    color: $azul;
+    background-color: transparent;
+    border: $azul 1px solid;
+}
+
+/* Ícono de Phosphor después del texto del CTA */
+@mixin cta-icon($code) {
+    &::after {
+        font-family: $font-icon-light !important;
+        content: $code;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+}
+
+/* Hover y active de los CTA outline */
+@mixin cta-states {
+    &:hover,
+    &:active {
+        background-color: $azul-hover;
+        border-radius: $radio-cta;
+    }
+}
+
+/* Efecto de elevación en hover */
+@mixin lift {
+    box-shadow: $sombra-hover;
+    transform: translateY(-3px);
+}
+
+
+/* ** *** SECCIONES *** ** */
+/* Hero con imagen de fondo oscurecida */
+@mixin hero-bg($img) {
+    background-image: $overlay, url($img);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin hero-content {
+    height: 90vh;
+    @include flex-column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+/* Ícono con línea inferior de la página de bienestar */
+@mixin section-icon($code) {
+    display: flex;
+    border-bottom: $terracota 1px solid;
+    color: $terracota;
+    font-size: 2rem;
+    align-items: flex-end;
+    font-family: $font-icon-fill !important;
+    content: $code;
+}
+
+/* Miniaturas de los dibujos */
+@mixin thumb($width) {
+    width: $width;
+    height: auto;
+    border: $terracota 1px solid;
+    border-radius: 4px;
+}
+
+/* Cuadrados de color de la leyenda */
+@mixin color-box($bg) {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-color: $bg;
+        border-radius: 5px;
+        @content;
+    }
+}
+
+
+/* ** *** FORMULARIO *** ** */
+@mixin form-field($font-size: 1.5rem) {
+    font-family: $font-texto;
+    line-height: normal;
+    font-size: $font-size;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    border: none;
+}
