@@ -85,7 +85,7 @@
 /* ** *** SECCIONES *** ** */
 /* Hero con imagen de fondo oscurecida */
 @mixin hero-bg($img) {
-    background-image: $overlay, url($img);
+    background-image: url($img);
     background-size: cover;
     background-repeat: no-repeat;
 }

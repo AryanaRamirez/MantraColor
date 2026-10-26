@@ -30,6 +30,15 @@
     }
 }
 
+/* Carrusel de dibujos verticales: más angosto para que el dibujo entre en pantalla */
+.carr-vertical .carousel-inner {
+    max-width: 28rem;
+
+    @include mq(desktop) {
+        max-width: 34rem;
+    }
+}
+
 .fig-caption {
     display: flex;
     flex-direction: column;

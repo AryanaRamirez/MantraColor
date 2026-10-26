@@ -4,7 +4,7 @@
 /* ** *** CONTACT SECTION *** ** */
 .hero-contacto {
     @include hero-bg('../imgs/hero-contacto.jpg');
-    background-position: center;
+    background-position: center bottom;
     width: 100vw;
     height: 90vh;
     display: block;

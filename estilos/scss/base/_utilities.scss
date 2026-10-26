@@ -35,6 +35,17 @@ $color-boxes: (
     "orange": rgb(211, 143, 34),
     "yellow": rgb(211, 211, 34),
     "black": rgb(0, 0, 0),
+    "violet": rgb(128, 70, 170),
+    "lilac": rgb(190, 160, 215),
+    "pink": rgb(232, 140, 170),
+    "brown": rgb(125, 80, 45),
+    "ochre": rgb(176, 128, 58),
+    "gold": rgb(212, 175, 55),
+    "gray": rgb(140, 140, 140),
+    "sky": rgb(125, 185, 230),
+    "navy": rgb(25, 45, 120),
+    "turquoise": rgb(40, 180, 170),
+    "beige": rgb(225, 205, 170),
 );
 
 @each $name, $color in $color-boxes {

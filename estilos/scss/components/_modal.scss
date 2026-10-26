@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* ** *** MODAL DE LOS DIBUJOS *** ** */
+.modal-dibujo {
+    .modal-content {
+        background-color: $crema;
+        color: $azul-noche;
+        border: none;
+
+        @include mq(tablet-up) {
+            border-radius: $radio-cta;
+        }
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .modal-body {
+        margin: 0;
+        padding: 0 1rem 2rem 1rem;
+
+        @include mq(desktop) {
+            padding: 0 2rem 2rem 2rem;
+        }
+    }
+
+    .dibujo-div {
+        justify-content: center;
+        align-items: flex-start;
+
+        @include mq(desktop) {
+            padding-right: 2rem;
+        }
+    }
+
+    .info-div {
+        gap: 2rem;
+
+        @include mq(desktop) {
+            padding-left: 2rem;
+        }
+    }
+}
+
+/* Dibujo ampliado dentro del modal */
+.modal-img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    width: auto;
+    height: auto;
+    border: $terracota 1px solid;
+    border-radius: 4px;
+}

@@ -4,6 +4,7 @@
 /* ** *** BIENESTAR SECTION *** ** */
 .hero-bienestar {
     @include hero-bg('../imgs/hero-bienestar.jpg');
+    background-position: left center;
     width: 100vw;
     height: 90vh;
     display: block;

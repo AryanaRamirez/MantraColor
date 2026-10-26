@@ -71,6 +71,16 @@
             font-size: clamp(2.6rem, 6vw, 6rem);
         }
     }
+
+    /* heroes de bienestar y contacto: mismo color y tamaño de título que el index */
+    &.content-ilustracion {
+        color: $azul-noche;
+        text-shadow: $sombra-texto-suave;
+
+        h1 {
+            font-size: clamp(2.6rem, 6vw, 6rem);
+        }
+    }
 }
 
 .info {

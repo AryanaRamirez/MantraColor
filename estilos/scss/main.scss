@@ -20,6 +20,9 @@
 /* Layout */
 @use 'layout/footer';
 
+/* Modal de los dibujos */
+@use 'components/modal';
+
 /* Tabs y utilidades */
 @use 'components/tabs';
 @use 'base/utilities';
