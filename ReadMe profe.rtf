@@ -1,17 +1,64 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 Hola profe, \'bfc\'f3mo est\'e1s?\
+\f1\b\fs32 \cf0 Mantra Color\
+\f0\b0\fs24 Sitio web de ilustraciones para colorear, pensado como un espacio de relajaci\'f3n y creatividad para todas las edades. Las l\'e1minas se pueden ver, elegir e imprimir en tama\'f1o A4.\
+Sitio publicado: {\field{\*\fldinst{HYPERLINK "https://mantra-color.vercel.app/index.html"}}{\fldrslt https://mantra-color.vercel.app/index.html}}\
+\f1\b Tecnolog\'edas\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	HTML5\
+\'95	SCSS (compilado a estilos/styles.css)\
+\'95	Bootstrap 5.3.8 (grilla, navbar, modales y carrusel)\
+\'95	Phosphor Icons\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \
-Te comparto por aqu\'ed la direcci\'f3n web del sitio subido a Vercel porque Ticher no me permite entregar ese link sino el de GitHub:\
+\f1\b \'daltimos cambios\
+\f0\b0 \f1\b Banco de dibujos para colorear\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	Agregu\'e9 30 l\'e1minas nuevas en tama\'f1o A4 (2480 \'d7 3508 px a 300 dpi), con trazo color #c96e49 y sin margen, para que se puedan imprimir sin borde:\
+\pard\tx940\tx1440\li1440\fi-1440\pardirnatural\partightenfactor0
+\uc0\u9702 	Obras maestras: 5 verticales y 5 horizontales, inspiradas en obras de Van Gogh, Monet, Hokusai, Munch, Vermeer y Klimt.\
+\uc0\u9702 	Paisajes y naturaleza: 6 verticales y 4 horizontales.\
+\uc0\u9702 	Mandalas: 4 verticales y 6 horizontales.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \
-{\field{\*\fldinst{HYPERLINK "https://mantra-color.vercel.app/"}}{\fldrslt https://mantra-color.vercel.app}}\
+\f1\b Modales en las p\'e1ginas de dibujos\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	En dibujos-obras.html, dibujos-paisajes.html y dibujos-mandalas.html, cada miniatura abre un modal de Bootstrap con:\
+\pard\tx940\tx1440\li1440\fi-1440\pardirnatural\partightenfactor0
+\uc0\u9702 	el dibujo ampliado,\
+\uc0\u9702 	el t\'edtulo, m\'e1s el autor y el a\'f1o en el caso de las obras,\
+\uc0\u9702 	una descripci\'f3n,\
+\uc0\u9702 	los colores sugeridos,\
+\uc0\u9702 	el formato, el tama\'f1o y el bot\'f3n de imprimir.\
+\pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	Los modales funcionan solo con los atributos de Bootstrap (data-bs-toggle y data-bs-target).\
+\'95	El dise\'f1o de la informaci\'f3n sigue el modelo previo de la p\'e1gina de ejemplo print-img.html.\
+\'95	Sum\'e9 11 colores nuevos a la leyenda de colores sugeridos (violeta, lila, rosa, marr\'f3n, ocre, dorado, gris, celeste, azul oscuro, turquesa y beige).\
+\'95	Nuevo parcial de estilos: estilos/scss/components/_modal.scss.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \
-Muchas gracias por la cursada y la buena onda!!\
+\f1\b Galer\'eda\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	El carrusel de galeria.html muestra ejemplos de dibujos coloreados con distintas t\'e9cnicas (cray\'f3n, marcador y l\'e1pices de colores), identificados como muestras hasta que se sumen los dibujos de la comunidad.\
+\'95	Debajo del carrusel hay miniaturas que, al hacer click, muestran ese dibujo en el carrusel (con data-bs-slide-to).\
+\'95	Cre\'e9 la p\'e1gina galeria-verticales.html, con el mismo formato y un carrusel m\'e1s angosto pensado para dibujos verticales.\
+\'95	Los botones Verticales y Horizontales ahora navegan entre las dos p\'e1ginas.\
+\'95	Para que la p\'e1gina cargue m\'e1s r\'e1pido, el carrusel usa versiones livianas de las im\'e1genes (-web.jpg) y las miniaturas otra todav\'eda m\'e1s chica (-mini.jpg).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \
-Saludos,\
-Ary}
+\f1\b Heroes de Bienestar y Contacto\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	Reemplac\'e9 las im\'e1genes de los heroes por ilustraciones propias de 2560 \'d7 1440 px.\
+\'95	Quit\'e9 el degradado oscuro que hab\'eda sobre las im\'e1genes para que se vean sus colores originales.\
+\'95	Ajust\'e9 la posici\'f3n de las im\'e1genes: en Bienestar va centrada en vertical y en Contacto alineada al borde inferior.\
+\'95	Los t\'edtulos ahora tienen el mismo color (azul noche) y el mismo tama\'f1o que el t\'edtulo del index, con una sombra suave para mejorar la lectura.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\
+\f1\b Pendientes\
+\f0\b0 \pard\tx220\tx720\li720\fi-720\pardirnatural\partightenfactor0
+\'95	Darle funcionalidad al bot\'f3n de imprimir de los modales.\
+\'95	Reemplazar las muestras de la galer\'eda por dibujos compartidos por la comunidad.}
